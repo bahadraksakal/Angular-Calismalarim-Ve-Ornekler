@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/*Global css dosyasıdır  buraya yazdığımız css leri tüm projede kullanabiliriz.
+her  companent için ayrı ayrı css yazmaktan kurtulduk angular ın yeni sürümüyle*/
+@import "~bootstrap\dist\css\bootstrap.min.css";
+@import "~font-awesome\css\font-awesome.min.css";
+@import "~alertifyjs\build\css\alertify.min.css";
+@import "~alertifyjs\build\css\themes\bootstrap.min.css";
+
+/*nu aletfy in bootstrap i*/
+/*"~" --> name is tilda*/
