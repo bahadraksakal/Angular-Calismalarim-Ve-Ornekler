@@ -1,0 +1,106 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 12000,
+      "categoryId": 1,
+      "description": "Asus Zenbook1",
+      "imageURL": "https://media.istockphoto.com/photos/man-using-laptop-blank-screen-at-home-picture-id1302084694?s=612x612"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 860,
+      "categoryId": 2,
+      "description": "Razer Mouse1",
+      "imageURL": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=465&q=80"
+    },
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 12000,
+      "categoryId": 1,
+      "description": "Asus Zenbook2",
+      "imageURL": "https://media.istockphoto.com/photos/man-using-laptop-blank-screen-at-home-picture-id1302084694?s=612x612"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 860,
+      "categoryId": 2,
+      "description": "Razer Mouse2",
+      "imageURL": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=465&q=80cz"
+    },
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 12000,
+      "categoryId": 1,
+      "description": "Asus Zenbook3",
+      "imageURL": "https://media.istockphoto.com/photos/man-using-laptop-blank-screen-at-home-picture-id1302084694?s=612x612"
+    },
+    {
+      "name": "Telefon",
+      "price": 24000,
+      "description": "iphone 13 PRO MAX",
+      "categoryId": "2",
+      "imageURL": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1629910158000",
+      "id": 9
+    },
+    {
+      "name": "BuzDolabı",
+      "price": "13000",
+      "imageURL": "https://media3.bosch-home.com/Product_Shots/435x515/MCSA03045729_J4275_2360145_KAN93VL30N_STP_closed_def.png",
+      "description": "Bosch Çift Kapılı Buz Dolabı",
+      "categoryId": "2",
+      "id": 11
+    },
+    {
+      "price": 30,
+      "description": "Jungle 1 Kg ballı Kuş yemi",
+      "name": "Kuş yemi",
+      "imageURL": "https://i.pinimg.com/originals/44/2a/2a/442a2aaa444bbc23935cb4a46d6e5c65.jpg",
+      "categoryId": "6",
+      "id": 12
+    },
+    {
+      "name": "Kuş Yemi",
+      "price": "19",
+      "imageURL": "https://www.karlidagmarket.com.tr/jungle-muhabbet-kus-yemi-300-gr-sweet-bird-tahilli-evpet-1653-16-B.png",
+      "description": "Sweet Bird Kuş yemi 700 gram",
+      "categoryId": "6",
+      "id": 13
+    }
+  ],
+  "categoryies": [
+    {
+      "id": 1,
+      "name": "Bilgisayar"
+    },
+    {
+      "id": 2,
+      "name": "Elektronik"
+    },
+    {
+      "id": 3,
+      "name": "İletişim"
+    },
+    {
+      "id": 4,
+      "name": "Müzik"
+    },
+    {
+      "id": 5,
+      "name": "Ev Eşyaları"
+    },
+    {
+      "id": 6,
+      "name": "Evcil Hayvan Yemleri"
+    },
+    {
+      "id": 7,
+      "name": "Medic"
+    }
+  ]
+}
