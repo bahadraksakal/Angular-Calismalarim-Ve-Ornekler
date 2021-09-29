@@ -1,0 +1,33 @@
+<!--form tag i içine alınca çalışmıyor-->
+<app-category></app-category>
+<div  class="form-group">
+    <input class="form-control" id="productNameSearch" placeholder="Ürün Arama" [(ngModel)]="filterTempText">
+    <small *ngIf="filterTempText" id="FilterTextHelp" class="form-text text-muted">Şuan <strong>{{filterTempText}}</strong> aradınız</small>
+    <!-- [(ToWayBinding)] için bu kullanılır {{one way binding}}-->
+  </div>
+
+<!-- <h3 *ngIf="products.length != 0; else noProduct">{{ title }}</h3> -->
+<div *ngIf=" productsLength(products)!=0 else noProduct"></div>
+<ng-template #noProduct>
+  <!-- sadece çağırıldığı zaman etkinleşir
+eğer yukarıdaki prdoucts dizisi type scripts içinde data almazsa else düşeriz ve noProduct çağrılır
+ng-template etkinleşmiş olur ve ng template i görürüz.-->
+  <div class="alert alert-warning" role="alert">Bu katogoride Ürün Yoktur.</div>
+</ng-template>
+<div class="row " #urunlerlist>
+  <div class="card" style="width: 18rem" *ngFor="let product of products | productFilter:filterTempText">
+    <img [src]="product.imageURL" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}} {{product.price | currency:'TRY':true:"1.2-2"}}</h5>
+      <p class="card-text">
+        {{product.description}}
+      </p>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
+    </div>
+  </div>
+</div>
+<!-- <p>product works! İlk komponentim </p>
+<h3>{{urun_0}} </h3> çift kıvırcık parantezin adı binding  bayning idir.
+yukarıda ki ifade one way binding dir sadece okuma işlemi yapar
+two way binfing - hem okur - hem yazar
+formlar içerisinde kullanılır daha çok -->

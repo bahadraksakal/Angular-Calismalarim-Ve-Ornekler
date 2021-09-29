@@ -1,0 +1,36 @@
+<h3>Yeni Ürün Ekle - Reactive</h3>
+<form [formGroup]="productAddForm" (ngSubmit)="add()" class="form-group">
+  <div class="form-group">
+    <input name="name" id="name" type="text" class="form-control" placeholder="Ürün Adı" formControlName="name">
+    <div *ngIf="productAddForm.get('name')?.hasError('required') && productAddForm.get('name')?.dirty"
+      class="alert alert-danger">Ürün İsmi Boş Geçilemez</div>
+      <!-- formControlName="name"   *ngIf="productAddForm.get('name') -->
+    <!-- angular form validation object is possibly 'null'   çözümü ? operatörü -->
+    <!-- formun ilk açılan hali 'pristine'
+      eğer ilk satıra dokunduk diğer saçıra geçtik 'touched'
+      inputa bir şeyler yazıp sildik dirty -->
+  </div>
+  <div class="form-group">
+    <input name="description" id="description" type="text" class="form-control" placeholder="Ürün Açıklaması" formControlName="description">
+    <div *ngIf="productAddForm.get('description')?.hasError('required') && productAddForm.get('description')?.dirty"
+      class="alert alert-danger">Ürün Açıklaması Boş Geçilemez</div>
+  </div>
+  <div class="form-group">
+    <input name="price" id="price" type="text" class="form-control" placeholder="Ürün Fiyatı" formControlName="price">
+    <div *ngIf="productAddForm.get('price')?.hasError('required') && productAddForm.get('price')?.dirty"
+      class="alert alert-danger">Ürün Fiyatı Boş Geçilemez</div>
+  </div>
+  <div class="form-group">
+    <input name="imageURL" id="imageURL" type="text" class="form-control" placeholder="Ürün Fotğrafı/URL" formControlName="imageURL">
+    <div *ngIf="productAddForm.get('imageURL')?.hasError('required') && productAddForm.get('imageURL')?.dirty"
+      class="alert alert-danger">Ürün Fotoğrafı/url Boş Geçilemez</div>
+  </div>
+  <div>
+    <select class="form-select" formControlName="categoryId"  id="categoryId" name="categoryId">
+      <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+    </select>
+    <div *ngIf="productAddForm.get('categoryId')?.hasError('categoryId') && productAddForm.get('price')?.dirty" class="alert alert-warning">Ürün Kategorisi Boş Geçilemez
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="productAddForm.invalid">Ürün Ekle</button>
+</form>
